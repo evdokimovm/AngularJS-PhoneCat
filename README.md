@@ -1,1 +1,1 @@
-## AngularJS PhoneCap App
+## AngularJS PhoneCat App
