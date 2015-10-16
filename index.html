@@ -1,20 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="phonecatApp">
 <head>
 	<title></title>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script type="text/javascript" src="js/controllers.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
+<body ng-controller="PhoneListCtrl">
 	<ul>
-		<li>
-			<span>Nexus S</span>
-			<p>Fast just got faster with Nexus S.</p>
-		</li>
-		<li>
-			<span>Motorola XOOM with Wi-Fi</span>
-			<p>The Next, Next Generation tablet.</p>
+		<li ng-repeat="phone in phones">
+			<span>{{phone.name}}</span>
+			<p>{{phone.snippet}}</p>
 		</li>
 	</ul>
 </body>
