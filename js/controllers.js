@@ -10,7 +10,9 @@ $scope.orderProp = 'age';
 
 }]);
 
-phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams',
-	function($scope, $routeParams) {
-		$scope.phoneId = $routeParams.phoneId;
+phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', '$http',
+	function($scope, $routeParams, $http) {
+		$http.get('data/' + $routeParams.phoneId + '.json').success(function(data) {
+			$scope.phone = data;
+		});
 	}]);
